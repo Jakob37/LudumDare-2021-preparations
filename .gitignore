@@ -69,3 +69,29 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+
+SampleScenes.meta
+Standard Assets.meta
+Standard Assets/2D.meta
+Standard Assets/2D/
+Standard Assets/Cameras.meta
+Standard Assets/Cameras/
+Standard Assets/Characters.meta
+Standard Assets/CrossPlatformInput.meta
+Standard Assets/Editor.meta
+Standard Assets/Editor/
+Standard Assets/Effects.meta
+Standard Assets/Effects/
+Standard Assets/Environment.meta
+Standard Assets/Environment/
+Standard Assets/Fonts.meta
+Standard Assets/Fonts/
+Standard Assets/ParticleSystems.meta
+Standard Assets/PhysicsMaterials.meta
+Standard Assets/PhysicsMaterials/
+Standard Assets/Prototyping.meta
+Standard Assets/Prototyping/
+Standard Assets/Utility.meta
+Standard Assets/Vehicles.meta
+Standard Assets/Vehicles/

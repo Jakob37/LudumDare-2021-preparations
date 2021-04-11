@@ -91,7 +91,7 @@ AnimatorController:
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
-    m_DefaultBool: 1
+    m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: isClimbing
     m_Type: 4
@@ -135,13 +135,13 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -4881497540762336444}
-    m_Position: {x: 150, y: 250, z: 0}
+    m_Position: {x: 150, y: 160, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3150415275693787397}
-    m_Position: {x: 150, y: 140, z: 0}
+    m_Position: {x: 150, y: 90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7480146617199963971}
-    m_Position: {x: -20, y: 180, z: 0}
+    m_Position: {x: 150, y: 230, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
