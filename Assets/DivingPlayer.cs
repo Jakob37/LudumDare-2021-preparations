@@ -8,6 +8,9 @@ public class DivingPlayer : MonoBehaviour
     [SerializeField] float runSpeed = 5f;
     [SerializeField] float normalDescentSpeed = 2f;
     [SerializeField] float slowDescentSpeed = 1f;
+    [SerializeField] float acceleration = 2f;
+
+    private bool isColliding = false;
 
     // Cached component references
     private Rigidbody2D myRigidBody;
@@ -22,6 +25,7 @@ public class DivingPlayer : MonoBehaviour
         Run();
         Descend();
     }
+
 
     private void Run()
     {
@@ -45,11 +49,11 @@ public class DivingPlayer : MonoBehaviour
 
         if (myRigidBody.velocity.y > targetVelocityY)
         {
-            myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, myRigidBody.velocity.y + targetVelocityY / 500);
+            myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, myRigidBody.velocity.y + targetVelocityY * Time.deltaTime * acceleration);
         }
         else if (myRigidBody.velocity.y < targetVelocityY)
         {
-            myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, myRigidBody.velocity.y - targetVelocityY / 500);
+            myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, myRigidBody.velocity.y - targetVelocityY * Time.deltaTime * acceleration);
         }
         else
         {
