@@ -226,6 +226,12 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8107188091234025517, guid: 7f1b0d9402e4eed47ac0f3d70d345084,
+        type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 3656628469890887677, guid: 7de2a44e229fd064186574310fbe89ba,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 879514873088292217, guid: 7f1b0d9402e4eed47ac0f3d70d345084, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7f1b0d9402e4eed47ac0f3d70d345084, type: 3}
@@ -240,8 +246,8 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
-  - component: {fileID: 519420030}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -266,7 +272,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19f8efc1c27be76488d243b9976de295, type: 3}
+  m_Script: {fileID: 11500000, guid: b28dac263845fc743bd75b275d71a425, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!20 &519420031
@@ -376,10 +382,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 207b094e1f8bd7a4cba5d3be6f08a8f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 3
-  normalDescentSpeed: 3
-  slowDescentSpeed: 1
-  acceleration: 2
 --- !u!1 &866944203
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,18 +9,25 @@ public class Player : MonoBehaviour
     [SerializeField] float normalDescentSpeed = 2f;
     [SerializeField] float slowDescentSpeed = 1f;
     [SerializeField] float acceleration = 2f;
+    [SerializeField] float maxHealth = 100f;
+    [SerializeField] float maxPressure = 10f;
+    [SerializeField] GameObject projectile;
 
     private Animator myAnimator;
 
-    // Cached component references
+    // Cached component referencek
     private Rigidbody2D myRigidBody;
+    private float currentHealth;
+    private float currentPressure;
+    private float pressureDamage = 10;
 
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
 
-        Debug.Log("I can debug now!");
+        currentHealth = maxHealth;
+        currentPressure = maxPressure;
     }
 
     void Update()
@@ -28,8 +35,21 @@ public class Player : MonoBehaviour
         Run();
         Descend();
         FlipSprite();
+        UpdatePressure();
+
+        if (currentHealth < 0) {
+            Destroy(this.gameObject);
+        }
+        Shoot();
     }
 
+    public float getHealthFraction() {
+        return currentHealth / maxHealth;
+    }
+
+    public float getPressureFraction() {
+        return currentPressure / maxPressure;
+    }
 
     private void Run()
     {
@@ -68,6 +88,23 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void UpdatePressure() {
+
+        var descendSpeed = myRigidBody.velocity.y;
+
+        var restoredPressure = Time.deltaTime;
+        var descendIncrease = - descendSpeed * Time.deltaTime;
+        var diffPressure = restoredPressure - descendIncrease;
+        currentPressure += diffPressure;
+
+        if (currentPressure > maxPressure) {
+            currentPressure = maxPressure;
+        } else if (currentPressure < 0) {
+            currentHealth += currentPressure * pressureDamage;
+            currentPressure = 0;
+        }
+    }
+
     private void FlipSprite()
     {
         bool playerHorizSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon;
@@ -84,7 +121,17 @@ public class Player : MonoBehaviour
         if (enemyMovement != null)
         {
             Debug.Log(collision);
-            Destroy(this.gameObject);
+            // Destroy(this.gameObject);
+            currentHealth -= 10;
+            Debug.Log("Current heath " + currentHealth);
+        }
+    }
+
+    private void Shoot()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Instantiate(projectile, transform.position, Quaternion.identity);
         }
     }
 }
