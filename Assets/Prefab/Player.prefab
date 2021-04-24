@@ -155,9 +155,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c766d2b2a617f844683e5ffc21735127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpStrength: 1.1
+  jumpStrength: 300
+  hoverStrength: 0.5
   recoilStrength: {x: 25, y: 50}
   maxHealth: 100
   maxPressure: 10
-  projectile: {fileID: 3656628469890887677, guid: 7de2a44e229fd064186574310fbe89ba,
-    type: 3}
+  gun: {fileID: 0}
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 64

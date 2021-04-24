@@ -6,11 +6,13 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] float jumpStrength = 1.05f;
+    [SerializeField] float jumpStrength = 250f;
+    [SerializeField] float hoverStrength = 0.5f;
     [SerializeField] Vector2 recoilStrength = new Vector2(25f, 50f);
     [SerializeField] float maxHealth = 100f;
     [SerializeField] float maxPressure = 10f;
     [SerializeField] Gun gun;
+    [SerializeField] LayerMask groundLayerMask;
 
     private Animator myAnimator;
 
@@ -57,9 +59,14 @@ public class Player : MonoBehaviour
 
     private void Descend()
     {
-        if (CrossPlatformInputManager.GetAxis("Vertical") > 0)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && myRigidBody.IsTouchingLayers(groundLayerMask))
         {
             myRigidBody.AddForce(transform.up * jumpStrength);
+        }
+
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            myRigidBody.AddForce(transform.up * hoverStrength);
         }
     }
 
