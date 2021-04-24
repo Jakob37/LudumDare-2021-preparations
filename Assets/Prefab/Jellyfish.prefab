@@ -85,6 +85,8 @@ GameObject:
   - component: {fileID: 3761653658045729826}
   - component: {fileID: 6634497104508584288}
   - component: {fileID: 3867979482683296092}
+  - component: {fileID: -1393200261678372803}
+  - component: {fileID: -6225341398063646562}
   m_Layer: 7
   m_Name: Jellyfish
   m_TagString: Untagged
@@ -208,3 +210,32 @@ CapsuleCollider2D:
   m_Offset: {x: 0.03, y: 0}
   m_Size: {x: 0.51, y: 0.63}
   m_Direction: 0
+--- !u!114 &-1393200261678372803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6756883035629480640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee5805bb78da96242b6fed3e08c9e710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+  detectionRange: 5
+  moveSpeed: 0.01
+--- !u!114 &-6225341398063646562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6756883035629480640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a1daef006276b44b99577a608204e58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+  destroyOnContact: 1

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1269835948875536919}
   - component: {fileID: -5744083926706064456}
   - component: {fileID: -4155789589724852224}
+  - component: {fileID: -2494926231215633597}
   m_Layer: 7
   m_Name: Crab
   m_TagString: Untagged
@@ -197,3 +198,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   destroyProjectile: 1
+--- !u!114 &-2494926231215633597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3656628469890887677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a1daef006276b44b99577a608204e58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  destroyOnContact: 0

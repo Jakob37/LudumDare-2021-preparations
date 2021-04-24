@@ -116,14 +116,13 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("OnTriggerEnter2D");
-        var enemyMovement = collision.gameObject.GetComponent<EnemyMovement>();
-        if (enemyMovement != null)
+        var enemyDamage = collision.gameObject.GetComponent<EnemyDamage>();
+        if (enemyDamage != null)
         {
-            Debug.Log(collision);
-            // Destroy(this.gameObject);
-            currentHealth -= 10;
-            Debug.Log("Current heath " + currentHealth);
+            currentHealth -= enemyDamage.damage;
+            if (enemyDamage.destroyOnContact) {
+                Destroy(enemyDamage.gameObject);
+            }
         }
     }
 
