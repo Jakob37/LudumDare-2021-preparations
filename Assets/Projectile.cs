@@ -25,14 +25,6 @@ public class Projectile : MonoBehaviour
         transform.position = new Vector2(transform.position.x + movementDirection.x, transform.position.y + movementDirection.y);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.GetComponent<Player>() == null)
-        {
-            Destroy(gameObject);
-        }
-    }
-
     private void OnBecameInvisible()
     {
         Destroy(gameObject);
