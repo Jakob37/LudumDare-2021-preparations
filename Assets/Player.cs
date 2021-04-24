@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     {
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
+
+        Debug.Log("I can debug now!");
     }
 
     void Update()
@@ -49,6 +51,15 @@ public class Player : MonoBehaviour
         bool playerHorizSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon;
         if (playerHorizSpeed) {
             transform.localScale = new Vector2(Mathf.Sign(myRigidBody.velocity.x), 1);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        Debug.Log("OnTriggerEnter2D");
+        var enemyMovement = collision.gameObject.GetComponent<EnemyMovement>();
+        if (enemyMovement != null) {
+            Debug.Log(collision);
+            Destroy(this.gameObject);
         }
     }
 }
