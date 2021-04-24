@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3230199968453143938}
   - component: {fileID: 1269835948875536919}
   m_Layer: 7
-  m_Name: Enemy
+  m_Name: Fish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,7 +97,7 @@ Animator:
   m_GameObject: {fileID: 3656628469890887677}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bba5c29aa1974bf45b9b8e390fd0ffd3, type: 2}
+  m_Controller: {fileID: 9100000, guid: ff5fffebd3b47d646ba2bc3543b703ae, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
