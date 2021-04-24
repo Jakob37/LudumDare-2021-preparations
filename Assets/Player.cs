@@ -59,12 +59,12 @@ public class Player : MonoBehaviour
 
     private void Descend()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow) && myRigidBody.IsTouchingLayers(groundLayerMask))
+        if (CrossPlatformInputManager.GetButtonDown("Jump") && myRigidBody.IsTouchingLayers(groundLayerMask))
         {
             myRigidBody.AddForce(transform.up * jumpStrength);
         }
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (CrossPlatformInputManager.GetButton("Hover"))
         {
             myRigidBody.AddForce(transform.up * hoverStrength);
         }
