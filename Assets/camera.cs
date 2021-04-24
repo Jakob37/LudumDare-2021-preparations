@@ -5,15 +5,28 @@ using UnityEngine;
 public class camera : MonoBehaviour
 {
     private Player player;
+    private float clampXLeft = 10f;
+    private float clampXRight = 20f;
     void Start()
     {
         player = FindObjectOfType<Player>();
+    }
+
+    private float clampX(float currPos) {
+        if (currPos < clampXLeft) {
+            return clampXLeft;
+        } else if (currPos > clampXRight) {
+            return clampXRight;
+        } else {
+            return currPos;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         Vector2 newCamPos = new Vector2(player.transform.position.x, player.transform.position.y);
-        transform.position = new Vector3(newCamPos.x, newCamPos.y, transform.position.z);
+        var clampedX = clampX(newCamPos.x);
+        transform.position = new Vector3(clampedX, newCamPos.y, transform.position.z);
     }
 }
