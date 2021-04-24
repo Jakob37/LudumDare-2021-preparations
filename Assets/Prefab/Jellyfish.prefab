@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6756883035629480642}
   - component: {fileID: 6756883035629480643}
   - component: {fileID: 3761653658045729826}
+  - component: {fileID: 6634497104508584288}
+  - component: {fileID: 3867979482683296092}
   m_Layer: 7
   m_Name: Jellyfish
   m_TagString: Untagged
@@ -69,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1194181589
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -8743172558561632914, guid: 1eb1f63a773142f42853df1a35300d9c,
     type: 3}
@@ -103,3 +105,33 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6634497104508584288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6756883035629480640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a29a79cce3d48e64bb16716d513dcdcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  destroyProjectile: 0
+--- !u!70 &3867979482683296092
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6756883035629480640}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.03, y: 0}
+  m_Size: {x: 0.51, y: 0.63}
+  m_Direction: 0
