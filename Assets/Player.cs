@@ -9,10 +9,11 @@ public class Player : MonoBehaviour
     [SerializeField] float normalDescentSpeed = 2f;
     [SerializeField] float slowDescentSpeed = 1f;
     [SerializeField] float acceleration = 2f;
+    [SerializeField] GameObject projectile;
 
     private Animator myAnimator;
 
-    // Cached component references
+    // Cached component referencek
     private Rigidbody2D myRigidBody;
 
     void Start()
@@ -28,6 +29,7 @@ public class Player : MonoBehaviour
         Run();
         Descend();
         FlipSprite();
+        Shoot();
     }
 
 
@@ -85,6 +87,14 @@ public class Player : MonoBehaviour
         {
             Debug.Log(collision);
             Destroy(this.gameObject);
+        }
+    }
+
+    private void Shoot()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Instantiate(projectile, transform.position, Quaternion.identity);
         }
     }
 }
