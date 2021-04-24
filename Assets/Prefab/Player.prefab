@@ -119,8 +119,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 1
+  m_AngularDrag: 1
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -156,9 +156,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 5
-  normalDescentSpeed: 2
-  slowDescentSpeed: 1
+  verticalSpeed: 3
   acceleration: 2
+  horizontalAcceleration: 3
   maxHealth: 100
   maxPressure: 10
   projectile: {fileID: 3656628469890887677, guid: 7de2a44e229fd064186574310fbe89ba,
