@@ -533,31 +533,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -6499765836056026134, guid: 7f1b0d9402e4eed47ac0f3d70d345084,
-        type: 3}
-      propertyPath: m_LinearDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -6499765836056026134, guid: 7f1b0d9402e4eed47ac0f3d70d345084,
-        type: 3}
-      propertyPath: m_AngularDrag
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: -6499765836056026134, guid: 7f1b0d9402e4eed47ac0f3d70d345084,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -6499765836056026134, guid: 7f1b0d9402e4eed47ac0f3d70d345084,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 879514873088292217, guid: 7f1b0d9402e4eed47ac0f3d70d345084,
-        type: 3}
-      propertyPath: jumpSpeed
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 2009938743701312883, guid: 7f1b0d9402e4eed47ac0f3d70d345084,
         type: 3}
       propertyPath: m_RootOrder
@@ -617,21 +592,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8107188091234025517, guid: 7f1b0d9402e4eed47ac0f3d70d345084,
-        type: 3}
-      propertyPath: jumpStrength
-      value: 1.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 8107188091234025517, guid: 7f1b0d9402e4eed47ac0f3d70d345084,
-        type: 3}
-      propertyPath: recoilStrength
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8107188091234025517, guid: 7f1b0d9402e4eed47ac0f3d70d345084,
-        type: 3}
-      propertyPath: normalDescentSpeed
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f1b0d9402e4eed47ac0f3d70d345084, type: 3}
