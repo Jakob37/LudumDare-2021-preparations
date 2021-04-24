@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,8 +7,7 @@ using UnityStandardAssets.CrossPlatformInput;
 public class Player : MonoBehaviour
 {
     [SerializeField] float runSpeed = 5f;
-    [SerializeField] float normalDescentSpeed = 2f;
-    [SerializeField] float slowDescentSpeed = 1f;
+    [SerializeField] float verticalSpeed = 2f;
     [SerializeField] float acceleration = 2f;
     [SerializeField] float maxHealth = 100f;
     [SerializeField] float maxPressure = 10f;
@@ -54,38 +54,41 @@ public class Player : MonoBehaviour
     private void Run()
     {
         float controlThrow = CrossPlatformInputManager.GetAxis("Horizontal");
-        Vector2 playerVelocity = new Vector2(controlThrow * runSpeed, myRigidBody.velocity.y);
-        myRigidBody.velocity = playerVelocity;
+        Vector2 playerVelocity; 
 
+        if (controlThrow > 0)
+        {
+            playerVelocity = new Vector2(myRigidBody.velocity.x + controlThrow * runSpeed * Time.deltaTime * acceleration, myRigidBody.velocity.y);
+        }
+        else if (controlThrow < 0)
+        {
+            playerVelocity = new Vector2(myRigidBody.velocity.x + controlThrow * runSpeed * Time.deltaTime * acceleration, myRigidBody.velocity.y);
+        }
+        else
+        {
+            playerVelocity = new Vector2(myRigidBody.velocity.x, myRigidBody.velocity.y);
+        }
+
+        SetVelocity(playerVelocity);
+        
         bool playerHorizSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon;
         myAnimator.SetBool("isRunning", playerHorizSpeed);
     }
 
     private void Descend()
     {
-        float targetVelocityY;
-
-        if (Input.GetKey(KeyCode.Space))
+        float yVelocity;
+        
+        if (CrossPlatformInputManager.GetAxis("Vertical") <= 0)
         {
-            targetVelocityY = -slowDescentSpeed;
+            yVelocity = myRigidBody.velocity.y - verticalSpeed * Time.deltaTime * acceleration;
         }
         else
         {
-            targetVelocityY = -normalDescentSpeed;
+            yVelocity = myRigidBody.velocity.y + verticalSpeed * Time.deltaTime * acceleration;
         }
-
-        if (myRigidBody.velocity.y > targetVelocityY)
-        {
-            myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, myRigidBody.velocity.y + targetVelocityY * Time.deltaTime * acceleration);
-        }
-        else if (myRigidBody.velocity.y < targetVelocityY)
-        {
-            myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, myRigidBody.velocity.y - targetVelocityY * Time.deltaTime * acceleration);
-        }
-        else
-        {
-            myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, targetVelocityY);
-        }
+        
+        myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, yVelocity);
     }
 
     public void UpdatePressure() {
@@ -130,7 +133,40 @@ public class Player : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            Recoil();
             Instantiate(projectile, transform.position, Quaternion.identity);
         }
+    }
+
+    private void Recoil()
+    {
+        var target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        var movementDirection = new Vector2(target.x - transform.position.x, target.y - transform.position.y);
+        var reverse = -movementDirection;
+        var velocity = new Vector2(myRigidBody.velocity.x + reverse.x, myRigidBody.velocity.y + reverse.y);
+        SetVelocity(velocity);
+    }
+
+    private void SetVelocity(Vector2 velocity)
+    {
+        if (velocity.x > runSpeed)
+        {
+            velocity.x = runSpeed;
+        }
+        else if (velocity.x < -runSpeed)
+        {
+            velocity.x = -runSpeed;
+        }
+
+        if (velocity.y > verticalSpeed)
+        {
+            velocity.y = verticalSpeed;
+        }
+        else if (velocity.y < -verticalSpeed)
+        {
+            velocity.y = -verticalSpeed;
+        }
+
+        myRigidBody.velocity = velocity;
     }
 }
