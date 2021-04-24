@@ -11,10 +11,11 @@ public class Player : MonoBehaviour
     [SerializeField] float acceleration = 2f;
     [SerializeField] float maxHealth = 100f;
     [SerializeField] float maxPressure = 10f;
+    [SerializeField] GameObject projectile;
 
     private Animator myAnimator;
 
-    // Cached component references
+    // Cached component referencek
     private Rigidbody2D myRigidBody;
     private float currentHealth;
     private float currentPressure;
@@ -39,6 +40,7 @@ public class Player : MonoBehaviour
         if (currentHealth < 0) {
             Destroy(this.gameObject);
         }
+        Shoot();
     }
 
     public float getHealthFraction() {
@@ -122,6 +124,14 @@ public class Player : MonoBehaviour
             // Destroy(this.gameObject);
             currentHealth -= 10;
             Debug.Log("Current heath " + currentHealth);
+        }
+    }
+
+    private void Shoot()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Instantiate(projectile, transform.position, Quaternion.identity);
         }
     }
 }
