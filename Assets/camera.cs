@@ -7,6 +7,7 @@ public class camera : MonoBehaviour
     private Player player;
     private float clampXLeft = 10f;
     private float clampXRight = 20f;
+
     void Start()
     {
         player = FindObjectOfType<Player>();
