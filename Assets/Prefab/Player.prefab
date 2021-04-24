@@ -161,4 +161,5 @@ MonoBehaviour:
   acceleration: 2
   maxHealth: 100
   maxPressure: 10
-  projectile: {fileID: 0}
+  projectile: {fileID: 3656628469890887677, guid: 7de2a44e229fd064186574310fbe89ba,
+    type: 3}

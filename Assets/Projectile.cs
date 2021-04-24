@@ -27,7 +27,7 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name != "Player")
+        if (collision.gameObject.GetComponent<Player>() == null)
         {
             Destroy(gameObject);
         }
