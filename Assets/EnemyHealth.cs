@@ -6,7 +6,10 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] int maxHealth;
     [SerializeField] bool destroyProjectile;
+    private SpriteRenderer mySpriteRenderer;
+
     private int currentHealth;
+    private float damageIndicatorTime;
     private bool isInjured = false;
     public bool GetIsInjured() {
         return isInjured;
@@ -14,9 +17,18 @@ public class EnemyHealth : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
+        damageIndicatorTime = Time.time;
+    }
+
+    void Update() {
+        ResetDamageIndicator();
     }
 
     public void Damage(int damage=1) {
+        mySpriteRenderer.color = Color.red;
+        damageIndicatorTime = Time.time + 0.1f;
+
         currentHealth -= damage;
         isInjured = true;
         if (currentHealth <= 0) {
@@ -33,4 +45,10 @@ public class EnemyHealth : MonoBehaviour
             }
         }
     }
+    private void ResetDamageIndicator() {
+        if (Time.time > damageIndicatorTime) {
+            mySpriteRenderer.color = Color.white;
+        }
+    }
+    
 }

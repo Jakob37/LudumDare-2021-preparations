@@ -19,17 +19,22 @@ public class Player : MonoBehaviour
 
     // Cached component referencek
     private Rigidbody2D myRigidBody;
+    private SpriteRenderer mySpriteRenderer;
     private float currentHealth;
     private float currentPressure;
     private float pressureDamage = 10;
+    private float damageIndicatorTime;
 
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
 
         currentHealth = maxHealth;
         currentPressure = maxPressure;
+
+        damageIndicatorTime = Time.time;
     }
 
     void Update()
@@ -38,6 +43,7 @@ public class Player : MonoBehaviour
         Descend();
         FlipSprite();
         UpdatePressure();
+        ResetDamageIndicator();
 
         if (currentHealth < 0) {
             Destroy(this.gameObject);
@@ -105,6 +111,10 @@ public class Player : MonoBehaviour
         if (enemyDamage != null)
         {
             currentHealth -= enemyDamage.damage;
+
+            mySpriteRenderer.color = Color.red;
+            damageIndicatorTime = Time.time + 0.1f;
+            
             if (enemyDamage.destroyOnContact) {
                 Destroy(enemyDamage.gameObject);
             }
@@ -127,5 +137,11 @@ public class Player : MonoBehaviour
     private void Recoil(Vector2 projectileDirection)
     {
         myRigidBody.AddForce(-projectileDirection * recoilStrength);
+    }
+
+    private void ResetDamageIndicator() {
+        if (Time.time > damageIndicatorTime) {
+            mySpriteRenderer.color = Color.white;
+        }
     }
 }
