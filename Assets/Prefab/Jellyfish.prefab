@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 3867979482683296092}
   - component: {fileID: -1393200261678372803}
   - component: {fileID: -6225341398063646562}
+  - component: {fileID: -3861565164772414805}
   m_Layer: 7
   m_Name: Jellyfish
   m_TagString: Untagged
@@ -238,3 +239,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   destroyOnContact: 1
+--- !u!114 &-3861565164772414805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6756883035629480640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc19822aa186cd4c944f17bfd822bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRange: 5
+  moveSpeed: 0.005
