@@ -3589,7 +3589,7 @@ PrefabInstance:
         type: 3}
       propertyPath: text
       value: I wore it after I married your granddad. You should treasure your memories
-        of him. One day they might slip away.
+        of him. One day they might slip away, just like they are doing for me.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60004e8482d4ac143b4eb4a48ebf319f, type: 3}
@@ -5042,9 +5042,9 @@ PrefabInstance:
     - target: {fileID: 1474324800692209721, guid: 60004e8482d4ac143b4eb4a48ebf319f,
         type: 3}
       propertyPath: text
-      value: I still remember you as a five-year old. Look how far you have come!
-        I would have wanted to follow you longer. But at least you can stay with
-        me for a bit more.
+      value: Look how far you have come! I wish I could say I remember you as a kid.
+        Treasure your time, and treasure your memories. Thank you for bringing my
+        treasure to me.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60004e8482d4ac143b4eb4a48ebf319f, type: 3}
