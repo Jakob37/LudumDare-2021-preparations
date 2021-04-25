@@ -8,18 +8,20 @@ public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void LoadGameOver() {
         StartCoroutine(LoadScene("GameOver"));
     }
 
     public void LoadGame() {
         StartCoroutine(LoadScene("main"));
+    }
+
+    public void LoadYouWon() {
+        StartCoroutine(LoadScene("YouWon"));
+    }
+
+    public void LoadYouLost() {
+        StartCoroutine(LoadScene("YouLost"));
     }
 
     IEnumerator LoadScene(string scene) {
