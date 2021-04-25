@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
-using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -17,6 +16,7 @@ public class Player : MonoBehaviour
     [SerializeField] float pressureRecovery = 2f;
 
     private Animator myAnimator;
+    public LevelLoader levelLoader;
 
     // Cached component referencek
     private Rigidbody2D myRigidBody;
@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
         }
 
         if (isDead && Time.time > changeToGameOverTime) {
-            SceneManager.LoadScene("GameOver");
+            levelLoader.LoadGameOver();
         }
     }
 
