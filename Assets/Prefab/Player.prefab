@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpStrength: 300
-  hoverStrength: 0.5
+  hoverStrength: 200
   recoilStrength: {x: 25, y: 50}
   maxHealth: 100
   maxPressure: 10
@@ -164,3 +164,6 @@ MonoBehaviour:
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  movementSpeed: 5
+  hoverPressureDamage: 4
+  pressureRecovery: 1.5

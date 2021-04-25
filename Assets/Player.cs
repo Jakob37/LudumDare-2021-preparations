@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
     [SerializeField] Gun gun;
     [SerializeField] LayerMask groundLayerMask;
     [SerializeField] float movementSpeed = 5f;
+    [SerializeField] float hoverPressureDamage = 2f;
+    [SerializeField] float pressureRecovery = 2f;
 
     private Animator myAnimator;
 
@@ -25,6 +27,9 @@ public class Player : MonoBehaviour
     private float currentPressure;
     private float pressureDamage = 10;
     private float damageIndicatorTime;
+    private float hoverPressureDamageDelay;
+    private float maxPressureDiff = -0.005f;
+    private bool isHovering;
 
     void Start()
     {
@@ -68,30 +73,49 @@ public class Player : MonoBehaviour
 
     private void Descend()
     {
+        isHovering = false;
+
         if (CrossPlatformInputManager.GetButtonDown("Jump") && myRigidBody.IsTouchingLayers(groundLayerMask))
         {
             myRigidBody.AddForce(transform.up * jumpStrength);
+            hoverPressureDamageDelay = 0.5f;
         }
 
         // TODO: Change me to other button!
         if (CrossPlatformInputManager.GetButton("Jump"))
         {
-            myRigidBody.AddForce(transform.up * hoverStrength);
+            myRigidBody.AddForce(transform.up * hoverStrength * Time.deltaTime);
+            isHovering = true;
         }
     }
 
     public void UpdatePressure() {
-
         var descendSpeed = myRigidBody.velocity.y;
 
-        var restoredPressure = Time.deltaTime;
-        var descendIncrease = - descendSpeed * Time.deltaTime;
+        var restoredPressure = Time.deltaTime * pressureRecovery;
+        var descendIncrease = Math.Max(0, -descendSpeed) * Time.deltaTime;
         var diffPressure = restoredPressure - descendIncrease;
+
+        if (isHovering)
+        {
+            hoverPressureDamageDelay -= Time.deltaTime;
+
+            if (hoverPressureDamageDelay < 0)
+            {
+                diffPressure -= Time.deltaTime * hoverPressureDamage;
+            }
+        }
+
+        diffPressure = Math.Max(diffPressure, maxPressureDiff);
+
         currentPressure += diffPressure;
 
-        if (currentPressure > maxPressure) {
+        if (currentPressure > maxPressure)
+        {
             currentPressure = maxPressure;
-        } else if (currentPressure < 0) {
+        }
+        else if (currentPressure < 0)
+        {
             currentHealth += currentPressure * pressureDamage;
             currentPressure = 0;
         }
