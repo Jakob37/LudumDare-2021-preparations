@@ -8,14 +8,12 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     [SerializeField] float jumpStrength = 250f;
-    [SerializeField] float hoverStrength = 0.5f;
     [SerializeField] Vector2 recoilStrength = new Vector2(25f, 50f);
     [SerializeField] float maxHealth = 100f;
     [SerializeField] float maxPressure = 10f;
     [SerializeField] Gun gun;
     [SerializeField] LayerMask groundLayerMask;
     [SerializeField] float movementSpeed = 5f;
-    [SerializeField] float hoverPressureDamage = 2f;
     [SerializeField] float pressureRecovery = 2f;
 
     private Animator myAnimator;
@@ -27,9 +25,6 @@ public class Player : MonoBehaviour
     private float currentPressure;
     private float pressureDamage = 10;
     private float damageIndicatorTime;
-    private float hoverPressureDamageDelay;
-    private float maxPressureDiff = -0.005f;
-    private bool isHovering;
     private float changeToGameOverTime;
     private bool isDead = false;
 
@@ -87,19 +82,9 @@ public class Player : MonoBehaviour
 
     private void Descend()
     {
-        isHovering = false;
-
         if (CrossPlatformInputManager.GetButtonDown("Jump") && myRigidBody.IsTouchingLayers(groundLayerMask))
         {
             myRigidBody.AddForce(transform.up * jumpStrength);
-            hoverPressureDamageDelay = 0.5f;
-        }
-
-        // TODO: Change me to other button!
-        if (CrossPlatformInputManager.GetButton("Jump"))
-        {
-            myRigidBody.AddForce(transform.up * hoverStrength * Time.deltaTime);
-            isHovering = true;
         }
     }
 
@@ -109,18 +94,6 @@ public class Player : MonoBehaviour
         var restoredPressure = Time.deltaTime * pressureRecovery;
         var descendIncrease = Math.Max(0, -descendSpeed) * Time.deltaTime;
         var diffPressure = restoredPressure - descendIncrease;
-
-        if (isHovering)
-        {
-            hoverPressureDamageDelay -= Time.deltaTime;
-
-            if (hoverPressureDamageDelay < 0)
-            {
-                diffPressure -= Time.deltaTime * hoverPressureDamage;
-            }
-        }
-
-        diffPressure = Math.Max(diffPressure, maxPressureDiff);
 
         currentPressure += diffPressure;
 
