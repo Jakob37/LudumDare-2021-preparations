@@ -7964,6 +7964,7 @@ Transform:
   - {fileID: 410142495}
   - {fileID: 631514739}
   - {fileID: 1914698701}
+  - {fileID: 1666039212}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8808,7 +8809,8 @@ PrefabInstance:
     - target: {fileID: 1474324800692209721, guid: 60004e8482d4ac143b4eb4a48ebf319f,
         type: 3}
       propertyPath: text
-      value: I have never liked fancy stones, but can still not resist noble metals.
+      value: Your granddad has always liked fancy stones, but could still never resist
+        noble metals.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60004e8482d4ac143b4eb4a48ebf319f, type: 3}
@@ -13243,6 +13245,87 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6756883035629480642, guid: c25f2672b0f2bd84e8de71fc2e4f52ee,
     type: 3}
   m_PrefabInstance: {fileID: 1648971761}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1666039211
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1024378163}
+    m_Modifications:
+    - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -73.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474324800692209717, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: m_Name
+      value: InformationStone (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474324800692209721, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: text
+      value: We met diving, me and your granddad. We prided in diving together where
+        noone else dared to venture.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 60004e8482d4ac143b4eb4a48ebf319f, type: 3}
+--- !u!4 &1666039212 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1666039211}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1679232172
 PrefabInstance:
