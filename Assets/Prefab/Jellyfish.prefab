@@ -223,8 +223,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee5805bb78da96242b6fed3e08c9e710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRange: 5
-  moveSpeed: 0.005
 --- !u!114 &-6225341398063646562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,3 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionRange: 5
   moveSpeed: 0.005
+  idleSpeed: 0.004
+  idleTurnTime: 5
+  idleDirectionX: 0
+  idleDirectionY: 1
