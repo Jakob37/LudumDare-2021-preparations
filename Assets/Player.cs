@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -46,7 +47,7 @@ public class Player : MonoBehaviour
         ResetDamageIndicator();
 
         if (currentHealth < 0) {
-            Destroy(this.gameObject);
+            SceneManager.LoadScene("GameOver");
         }
         Shoot();
     }
