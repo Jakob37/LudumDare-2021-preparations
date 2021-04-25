@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Jellyfish : MonoBehaviour
+public class MoveTowardsBehaviour : MonoBehaviour
 {
     [SerializeField] public float detectionRange;
     [SerializeField] public float moveSpeed;
 
     private Player player;
     private Transform myTransform;
-
+    private EnemyHealth health;
     void Start()
     {
         player = FindObjectOfType<Player>();
         myTransform = GetComponent<Transform>();
+        health = GetComponent<EnemyHealth>();
     }
 
     // Update is called once per frame
@@ -27,6 +28,11 @@ public class Jellyfish : MonoBehaviour
 
     private void MoveTowardsPlayer() {
         Vector3 direction = (myTransform.position - player.transform.position).normalized;
-        myTransform.position -= direction * moveSpeed * Time.deltaTime * 60;
+        float usedSpeed = moveSpeed;
+        if (health.GetIsInjured()) {
+            usedSpeed = moveSpeed * 0.5f;
+        }
+        myTransform.position -= direction * usedSpeed;
+        transform.localScale = new Vector2(-Mathf.Sign(direction.x), 1);
     }
 }
