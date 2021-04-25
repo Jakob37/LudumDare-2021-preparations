@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     // Cached component referencek
     private Rigidbody2D myRigidBody;
     private SpriteRenderer mySpriteRenderer;
+    private BoxCollider2D feetCollider;
     private float currentHealth;
     private float currentPressure;
     private float pressureDamage = 10;
@@ -33,6 +34,7 @@ public class Player : MonoBehaviour
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+        feetCollider = GetComponent<BoxCollider2D>();
 
         currentHealth = maxHealth;
         currentPressure = maxPressure;
@@ -82,7 +84,7 @@ public class Player : MonoBehaviour
 
     private void Descend()
     {
-        if (CrossPlatformInputManager.GetButtonDown("Jump") && myRigidBody.IsTouchingLayers(groundLayerMask))
+        if (CrossPlatformInputManager.GetButtonDown("Jump") && feetCollider.IsTouchingLayers(groundLayerMask))
         {
             myRigidBody.AddForce(transform.up * jumpStrength);
         }
