@@ -28,6 +28,6 @@ public class Shark : MonoBehaviour
     private void MoveTowardsPlayer() {
         Vector3 direction = (myTransform.position - player.transform.position).normalized;
         myTransform.position -= direction * moveSpeed;
-        transform.localScale = new Vector2(Mathf.Sign(direction.x), 1);
+        transform.localScale = new Vector2(-Mathf.Sign(direction.x), 1);
     }
 }
