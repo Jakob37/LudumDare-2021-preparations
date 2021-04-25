@@ -47,6 +47,7 @@ public class Gun : MonoBehaviour
 
     public bool Shoot() {
         if (harpoon != null) {
+            GetComponent<AudioSource>().Play();
             harpoon.Trigger();
             harpoon = null;
             nextReload = Time.time + fireRate;
