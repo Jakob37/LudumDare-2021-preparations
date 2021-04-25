@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8063054360684231091}
   - component: {fileID: -5462503781478511676}
   - component: {fileID: 320812359461236827}
+  - component: {fileID: -1134609034311132363}
   m_Layer: 7
   m_Name: Shark
   m_TagString: Untagged
@@ -167,3 +168,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionRange: 8
   moveSpeed: 0.07
+--- !u!95 &-1134609034311132363
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314687310544141314}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e159dc660d0f88b498b0f2c7b8e8e211, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
