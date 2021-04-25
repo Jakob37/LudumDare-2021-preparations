@@ -117,8 +117,10 @@ public class Player : MonoBehaviour
         {
             var target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             var movementDirection = new Vector2(target.x - transform.position.x, target.y - transform.position.y);
-            gun.Shoot();
-            Recoil(movementDirection);
+            bool shotFired = gun.Shoot();
+            if (shotFired) {
+                Recoil(movementDirection);
+            }
         }
     }
 

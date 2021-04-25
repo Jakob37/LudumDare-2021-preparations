@@ -38,35 +38,25 @@ public class Gun : MonoBehaviour
 
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
+        // Reload gun when enough time has passed
         if (Time.time > nextReload && (harpoon is null)) {
             LoadProjectile();
         }
 
     }
 
-    public void Shoot() {
+    public bool Shoot() {
         if (harpoon != null) {
-            Debug.Log("Harpoon is fired");
             harpoon.Trigger();
-            // LoadProjectile();
             harpoon = null;
             nextReload = Time.time + fireRate;
-        } else {
-            Debug.Log("Harpoon is null");
-        }
-        Debug.Log("Next reload" + nextReload);
-        
+            return true;
+        } 
+        return false;
     }
 
     public void LoadProjectile() {
-        Debug.Log("In LoadProjectile");
         harpoon = Instantiate<Projectile>(projectile, transform.position, Quaternion.identity);
         harpoon.setGun(this);
-        if (harpoon is null) {
-            Debug.Log("Harpoon is null");
-        } else {
-
-            Debug.Log("Harpoon is: " + harpoon.ToString());
-        }
     }
 }
