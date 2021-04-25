@@ -238,8 +238,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You return to the surfice and bring the item with you. Your grandma looks
-    at you with blank eyes. She recognize nether the item nor you.
+  m_Text: You return to the surface and bring the treasure you found. Your grandma
+    looks at you with blank eyes. She recognizes nether you nor the treasure.
 --- !u!222 &386600284
 CanvasRenderer:
   m_ObjectHideFlags: 0
