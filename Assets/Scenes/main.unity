@@ -1120,11 +1120,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -1.59
       objectReference: {fileID: 0}
-    - target: {fileID: 3301303262215567561, guid: 51284905c054cfa40afd68a8843b152e,
-        type: 3}
-      propertyPath: m_Text
-      value: Basic test text
-      objectReference: {fileID: 0}
     - target: {fileID: 3301303262295699780, guid: 51284905c054cfa40afd68a8843b152e,
         type: 3}
       propertyPath: m_RootOrder
