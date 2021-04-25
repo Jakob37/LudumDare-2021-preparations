@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     [SerializeField] LayerMask groundLayerMask;
     [SerializeField] float movementSpeed = 5f;
     [SerializeField] float pressureRecovery = 2f;
+    [SerializeField] float invinsibilityDuration = 0.2f;
 
     private Animator myAnimator;
     public LevelLoader levelLoader;
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour
     private float pressureDamage = 10;
     private float damageIndicatorTime;
     private float changeToGameOverTime;
+    private float timeOfLastDamage;
     private bool isDead = false;
 
     void Start()
@@ -122,7 +124,7 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var enemyDamage = collision.gameObject.GetComponent<EnemyDamage>();
-        if (enemyDamage != null)
+        if (enemyDamage != null && Time.time > timeOfLastDamage + invinsibilityDuration)
         {
             currentHealth -= enemyDamage.damage;
 
@@ -132,6 +134,8 @@ public class Player : MonoBehaviour
             if (enemyDamage.destroyOnContact) {
                 Destroy(enemyDamage.gameObject);
             }
+
+            timeOfLastDamage = Time.time;
         }
     }
 
