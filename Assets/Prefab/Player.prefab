@@ -164,6 +164,6 @@ MonoBehaviour:
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  movementSpeed: 5
+  movementSpeed: 8
   hoverPressureDamage: 4
   pressureRecovery: 1.5

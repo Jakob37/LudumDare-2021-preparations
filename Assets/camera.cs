@@ -6,7 +6,7 @@ public class camera : MonoBehaviour
 {
     private Player player;
     private float clampXLeft = 8f;
-    private float clampXRight = 20f;
+    private float clampXRight = 22f;
 
     void Start()
     {

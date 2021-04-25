@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a29a79cce3d48e64bb16716d513dcdcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2
+  maxHealth: 1
   destroyProjectile: 1
 --- !u!114 &-3590662467793718500
 MonoBehaviour:
