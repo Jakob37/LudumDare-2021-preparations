@@ -44,7 +44,7 @@ public class Projectile : MonoBehaviour
         triggered = true;
 
         target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        movementDirection = new Vector2(target.x - transform.position.x, target.y - transform.position.y).normalized * speed;
+        movementDirection = new Vector2(target.x - transform.position.x, target.y - transform.position.y).normalized * speed * Time.deltaTime;
         
         float angle = Mathf.Atan2(movementDirection.y, movementDirection.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
