@@ -23,7 +23,7 @@ public class EnemyHealth : MonoBehaviour
         if (collision.gameObject.GetComponent<Projectile>() != null)
         {
             Damage();
-            if (destroyProjectile) {
+            if (destroyProjectile && collision.gameObject.GetComponent<Projectile>().isTriggered()) {
                 Destroy(collision.gameObject);
             }
         }

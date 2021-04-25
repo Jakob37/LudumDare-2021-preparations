@@ -53,4 +53,8 @@ public class Projectile : MonoBehaviour
     public void setGun(Gun gun) {
         this.gun = gun;
     }
+
+    public bool isTriggered() {
+        return triggered;
+    }
 }
