@@ -14,7 +14,6 @@ public class Player : MonoBehaviour
     [SerializeField] LayerMask groundLayerMask;
     [SerializeField] float movementSpeed = 5f;
     [SerializeField] float pressureRecovery = 2f;
-    [SerializeField] float pressureReductionFactor = 1.05f;
 
     private Animator myAnimator;
     public LevelLoader levelLoader;
@@ -93,7 +92,7 @@ public class Player : MonoBehaviour
         var descendSpeed = myRigidBody.velocity.y;
 
         var restoredPressure = Time.deltaTime * pressureRecovery;
-        var descendIncrease = Math.Max(0, -descendSpeed) * Time.deltaTime * pressureReductionFactor;
+        var descendIncrease = Math.Max(0, -descendSpeed) * Time.deltaTime;
         var diffPressure = restoredPressure - descendIncrease;
 
         currentPressure += diffPressure;
