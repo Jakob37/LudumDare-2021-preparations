@@ -202,8 +202,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 106.4}
-  m_SizeDelta: {x: 819.555, y: 339.883}
+  m_AnchoredPosition: {x: 3.701, y: 71.2}
+  m_SizeDelta: {x: 940.097, y: 490.033}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &386600283
 MonoBehaviour:
@@ -226,12 +226,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_Font: {fileID: 12800000, guid: a35e2d2a92ee936709c9a6f12f1d2a3a, type: 3}
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 5
-    m_MaxSize: 50
+    m_MaxSize: 80
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -239,8 +239,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: You return to the surface with the ring. You bring it to your grandma.
-    She looks at you and then the ring. Then, suddenly, you see a spark in her eyes.
-    She smiles at you.
+    She looks at you and then the ring. Then, suddenly, you see a spark in her eyes
+    and she smiles at you.
 --- !u!222 &386600284
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18249,7 +18249,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.2, y: -28.4}
+  m_AnchoredPosition: {x: 2.2, y: -99.6}
   m_SizeDelta: {x: 179.357, y: 41.291}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2022479663
