@@ -30,7 +30,7 @@ public class MoveTowardsBehaviour : MonoBehaviour
         Vector3 direction = (myTransform.position - player.transform.position).normalized;
         float usedSpeed = moveSpeed;
         if (health.GetIsInjured()) {
-            usedSpeed = moveSpeed * 0.5f;
+            usedSpeed = moveSpeed * 0.5f * Time.deltaTime * 60;
         }
         myTransform.position -= direction * usedSpeed;
         transform.localScale = new Vector2(-Mathf.Sign(direction.x), 1);
