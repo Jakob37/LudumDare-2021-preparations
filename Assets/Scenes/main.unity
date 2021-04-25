@@ -1059,7 +1059,7 @@ PrefabInstance:
     - target: {fileID: 3656628469890887678, guid: 8eb5e91f67780634c94d8e689c1ff0a9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.31625
+      value: -12.11
       objectReference: {fileID: 0}
     - target: {fileID: 3656628469890887678, guid: 8eb5e91f67780634c94d8e689c1ff0a9,
         type: 3}
@@ -1379,7 +1379,7 @@ PrefabInstance:
     - target: {fileID: 6085582953450242731, guid: 91e34d560be229747bc4e4ff02113260,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.81
+      value: 4.11
       objectReference: {fileID: 0}
     - target: {fileID: 6085582953450242731, guid: 91e34d560be229747bc4e4ff02113260,
         type: 3}
@@ -3030,7 +3030,7 @@ PrefabInstance:
     - target: {fileID: -6499765836056026134, guid: 7f1b0d9402e4eed47ac0f3d70d345084,
         type: 3}
       propertyPath: m_LinearDrag
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -6499765836056026134, guid: 7f1b0d9402e4eed47ac0f3d70d345084,
         type: 3}
@@ -3040,7 +3040,7 @@ PrefabInstance:
     - target: {fileID: -6499765836056026134, guid: 7f1b0d9402e4eed47ac0f3d70d345084,
         type: 3}
       propertyPath: m_GravityScale
-      value: 0.15
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 2009938743701312883, guid: 7f1b0d9402e4eed47ac0f3d70d345084,
         type: 3}
@@ -3050,7 +3050,7 @@ PrefabInstance:
     - target: {fileID: 2009938743701312883, guid: 7f1b0d9402e4eed47ac0f3d70d345084,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.73
+      value: 4.03
       objectReference: {fileID: 0}
     - target: {fileID: 2009938743701312883, guid: 7f1b0d9402e4eed47ac0f3d70d345084,
         type: 3}
@@ -3111,6 +3111,16 @@ PrefabInstance:
         type: 3}
       propertyPath: hoverStrength
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107188091234025517, guid: 7f1b0d9402e4eed47ac0f3d70d345084,
+        type: 3}
+      propertyPath: recoilStrength.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107188091234025517, guid: 7f1b0d9402e4eed47ac0f3d70d345084,
+        type: 3}
+      propertyPath: recoilStrength.y
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8107188091234025517, guid: 7f1b0d9402e4eed47ac0f3d70d345084,
         type: 3}
@@ -3414,7 +3424,7 @@ PrefabInstance:
     - target: {fileID: 1474324800692209721, guid: 60004e8482d4ac143b4eb4a48ebf319f,
         type: 3}
       propertyPath: text
-      value: Now, go find your grandmother's necklace.
+      value: ... (insert some text)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60004e8482d4ac143b4eb4a48ebf319f, type: 3}
@@ -4548,7 +4558,7 @@ PrefabInstance:
     - target: {fileID: 1474324800692209721, guid: 60004e8482d4ac143b4eb4a48ebf319f,
         type: 3}
       propertyPath: text
-      value: Now, go find your grandmother's necklace.
+      value: ...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60004e8482d4ac143b4eb4a48ebf319f, type: 3}
@@ -4852,7 +4862,8 @@ PrefabInstance:
     - target: {fileID: 1474324800692209721, guid: 60004e8482d4ac143b4eb4a48ebf319f,
         type: 3}
       propertyPath: text
-      value: You find a message here!
+      value: ...is this a good place? No, not yet, I want to go deeper. We need to
+        hide it well...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60004e8482d4ac143b4eb4a48ebf319f, type: 3}
@@ -5799,6 +5810,7 @@ GameObject:
   m_Component:
   - component: {fileID: 790115849}
   - component: {fileID: 790115848}
+  - component: {fileID: 790115850}
   m_Layer: 0
   m_Name: AudioPlayer
   m_TagString: Untagged
@@ -5916,6 +5928,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &790115850
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790115847}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &800304433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6250,7 +6358,7 @@ PrefabInstance:
     - target: {fileID: 1474324800692209721, guid: 60004e8482d4ac143b4eb4a48ebf319f,
         type: 3}
       propertyPath: text
-      value: Now, go find your grandmother's necklace.
+      value: First time I met her, ...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60004e8482d4ac143b4eb4a48ebf319f, type: 3}
@@ -6280,7 +6388,7 @@ PrefabInstance:
     - target: {fileID: 3656628469890887678, guid: 8eb5e91f67780634c94d8e689c1ff0a9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.7437496
+      value: -5.53
       objectReference: {fileID: 0}
     - target: {fileID: 3656628469890887678, guid: 8eb5e91f67780634c94d8e689c1ff0a9,
         type: 3}
@@ -7191,7 +7299,8 @@ PrefabInstance:
     - target: {fileID: 1474324800692209721, guid: 60004e8482d4ac143b4eb4a48ebf319f,
         type: 3}
       propertyPath: text
-      value: Now, go find your grandmother's necklace.
+      value: 'I have put a trap, to prevent others from stealing it. Only one treasure
+        is '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60004e8482d4ac143b4eb4a48ebf319f, type: 3}
@@ -7501,7 +7610,8 @@ PrefabInstance:
     - target: {fileID: 1474324800692209721, guid: 60004e8482d4ac143b4eb4a48ebf319f,
         type: 3}
       propertyPath: text
-      value: Now, go find your grandmother's necklace.
+      value: I remember how beautiful she looked wearing it for the first time. Diamonds
+        were not for her. She liked it simple.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60004e8482d4ac143b4eb4a48ebf319f, type: 3}
@@ -8805,12 +8915,12 @@ PrefabInstance:
     - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.34
+      value: 4.07
       objectReference: {fileID: 0}
     - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.11
+      value: -16.21
       objectReference: {fileID: 0}
     - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
         type: 3}
@@ -8860,7 +8970,8 @@ PrefabInstance:
     - target: {fileID: 1474324800692209721, guid: 60004e8482d4ac143b4eb4a48ebf319f,
         type: 3}
       propertyPath: text
-      value: This stone sits next to a crab.
+      value: Be careful with the pressure down here! Don't go down too quickly. Use
+        your harpoon to stay afloat longer.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60004e8482d4ac143b4eb4a48ebf319f, type: 3}
@@ -134346,12 +134457,12 @@ PrefabInstance:
     - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.48
+      value: -7.92
       objectReference: {fileID: 0}
     - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.11
+      value: -1.07
       objectReference: {fileID: 0}
     - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
         type: 3}
@@ -134401,7 +134512,8 @@ PrefabInstance:
     - target: {fileID: 1474324800692209721, guid: 60004e8482d4ac143b4eb4a48ebf319f,
         type: 3}
       propertyPath: text
-      value: Are you ready for some jellyfish?
+      value: My dear grandchild. You must be looking for my treasure, just as I asked
+        you. Many dangers lurks here. Be careful, and find my notes.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60004e8482d4ac143b4eb4a48ebf319f, type: 3}
