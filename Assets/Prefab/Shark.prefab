@@ -168,6 +168,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionRange: 8
   moveSpeed: 0.07
+  idleSpeed: 0.002
+  idleTurnTime: 5
+  idleDirectionX: 1
+  idleDirectionY: 0
 --- !u!95 &-1134609034311132363
 Animator:
   serializedVersion: 3

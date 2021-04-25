@@ -199,3 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionRange: 5
   moveSpeed: 0.05
+  idleSpeed: 0.005
+  idleTurnTime: 3
+  idleDirectionX: 1
+  idleDirectionY: 0
