@@ -165,5 +165,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   movementSpeed: 8
-  hoverPressureDamage: 4
+  hoverPressureDamage: 6
   pressureRecovery: 1.5
