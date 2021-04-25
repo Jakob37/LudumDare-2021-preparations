@@ -5059,6 +5059,11 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -1728683497
       objectReference: {fileID: 0}
+    - target: {fileID: 3301303262162376441, guid: 51284905c054cfa40afd68a8843b152e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3301303262162376442, guid: 51284905c054cfa40afd68a8843b152e,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -5066,8 +5071,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3301303262162376442, guid: 51284905c054cfa40afd68a8843b152e,
         type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.5038335
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301303262162376442, guid: 51284905c054cfa40afd68a8843b152e,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0106
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301303262162376442, guid: 51284905c054cfa40afd68a8843b152e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.7346
       objectReference: {fileID: 0}
     - target: {fileID: 3301303262162376443, guid: 51284905c054cfa40afd68a8843b152e,
         type: 3}
@@ -5077,22 +5092,22 @@ PrefabInstance:
     - target: {fileID: 3301303262215567560, guid: 51284905c054cfa40afd68a8843b152e,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 673.13
+      value: 692.97
       objectReference: {fileID: 0}
     - target: {fileID: 3301303262215567560, guid: 51284905c054cfa40afd68a8843b152e,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 429.14
+      value: 169.1
       objectReference: {fileID: 0}
     - target: {fileID: 3301303262215567560, guid: 51284905c054cfa40afd68a8843b152e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1.59
+      value: 0.92
       objectReference: {fileID: 0}
-    - target: {fileID: 3301303262215567561, guid: 51284905c054cfa40afd68a8843b152e,
+    - target: {fileID: 3301303262215567560, guid: 51284905c054cfa40afd68a8843b152e,
         type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 40
+      propertyPath: m_AnchoredPosition.y
+      value: -157.13
       objectReference: {fileID: 0}
     - target: {fileID: 3301303262295699780, guid: 51284905c054cfa40afd68a8843b152e,
         type: 3}
