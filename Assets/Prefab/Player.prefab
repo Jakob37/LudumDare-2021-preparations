@@ -157,7 +157,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpStrength: 300
-  hoverStrength: 200
   recoilStrength: {x: 25, y: 50}
   maxHealth: 100
   maxPressure: 10
@@ -166,8 +165,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   movementSpeed: 8
-  hoverPressureDamage: 6
   pressureRecovery: 1.5
+  invinsibilityDuration: 0.2
+  levelLoader: {fileID: 0}
 --- !u!1 &6051534411820486146
 GameObject:
   m_ObjectHideFlags: 0
