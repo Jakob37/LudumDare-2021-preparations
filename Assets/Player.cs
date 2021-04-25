@@ -64,7 +64,8 @@ public class Player : MonoBehaviour
             myRigidBody.AddForce(transform.up * jumpStrength);
         }
 
-        if (CrossPlatformInputManager.GetButton("Hover"))
+        // TODO: Change me to other button!
+        if (CrossPlatformInputManager.GetButton("Jump"))
         {
             myRigidBody.AddForce(transform.up * hoverStrength);
         }

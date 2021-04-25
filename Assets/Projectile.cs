@@ -18,20 +18,12 @@ public class Projectile : MonoBehaviour
     void Start()
     {
         triggered = false;
-        
-//        target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-//        movementDirection = new Vector2(target.x - transform.position.x, target.y - transform.position.y).normalized * speed;
-//        
-//        float angle = Mathf.Atan2(movementDirection.y, movementDirection.x) * Mathf.Rad2Deg;
-//        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
     // Update is called once per frame
     void Update()
     {
         if (triggered) {
-          //  transform.position = new Vector2(transform.position.x + movementDirection.x, transform.position.y + movementDirection.y);
-           // movementDirection = new Vector2(target.x - transform.position.x, target.y - transform.position.y).normalized * speed;
             transform.position = new Vector2(transform.position.x + movementDirection.x, transform.position.y + movementDirection.y); 
         } else {
             target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -42,14 +34,6 @@ public class Projectile : MonoBehaviour
             transform.position = transform.position + new Vector3(direction.x * offset, direction.y * offset, 0.0f);
         }
     }
-
-//    private void OnTriggerEnter2D(Collider2D collision)
-//    {
-//        if (triggered && collision.gameObject.GetComponent<Player>() == null)
-//        {
-//            Destroy(gameObject);
-//        }
-//    }
 
     private void OnBecameInvisible()
     {
