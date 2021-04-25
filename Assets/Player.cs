@@ -30,6 +30,8 @@ public class Player : MonoBehaviour
     private float hoverPressureDamageDelay;
     private float maxPressureDiff = -0.005f;
     private bool isHovering;
+    private float changeToGameOverTime;
+    private bool isDead = false;
 
     void Start()
     {
@@ -41,20 +43,31 @@ public class Player : MonoBehaviour
         currentPressure = maxPressure;
 
         damageIndicatorTime = Time.time;
+        changeToGameOverTime = Time.time;
     }
 
     void Update()
     {
-        Run();
+        if (!isDead) {
+            Run();
+            Shoot();
+        }
+
         Descend();
         FlipSprite();
         UpdatePressure();
         ResetDamageIndicator();
 
-        if (currentHealth < 0) {
+        if (currentHealth < 0 && !isDead) {
+            isDead = true;
+            myAnimator.SetBool("isDead", isDead);
+
+            changeToGameOverTime = Time.time + 3;
+        }
+
+        if (isDead && Time.time > changeToGameOverTime) {
             SceneManager.LoadScene("GameOver");
         }
-        Shoot();
     }
 
     public float getHealthFraction() {
