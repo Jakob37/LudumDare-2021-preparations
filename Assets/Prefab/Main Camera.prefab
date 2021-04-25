@@ -230,8 +230,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.92, y: -157.13}
-  m_SizeDelta: {x: 692.97, y: 169.1}
+  m_AnchoredPosition: {x: 0.92, y: -178.98}
+  m_SizeDelta: {x: 692.97, y: 216.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3301303262215567562
 CanvasRenderer:
@@ -263,10 +263,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: a35e2d2a92ee936709c9a6f12f1d2a3a, type: 3}
-    m_FontSize: 30
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 80
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -274,7 +274,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Look how far you have come! I wish I could say I remember you as a kid.
+    Treasure your time, and treasure your memories. Thank you for bringing my treasure
+    to me.
 --- !u!114 &3301303262215567563
 MonoBehaviour:
   m_ObjectHideFlags: 0
