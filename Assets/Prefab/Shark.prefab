@@ -166,4 +166,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionRange: 8
-  moveSpeed: 0.02
+  moveSpeed: 0.1
