@@ -47,9 +47,18 @@ TagManager:
   - name: Player
     uniqueID: 808777895
     locked: 0
+  - name: Projectile
+    uniqueID: 1065487507
+    locked: 0
+  - name: Gun
+    uniqueID: 2722227631
+    locked: 0
   - name: Enemy
     uniqueID: 1194181589
     locked: 0
   - name: Foreground
     uniqueID: 2452136253
+    locked: 0
+  - name: New Layer
+    uniqueID: 2566283799
     locked: 0
