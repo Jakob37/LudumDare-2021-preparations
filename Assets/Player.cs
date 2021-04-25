@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] float maxPressure = 10f;
     [SerializeField] Gun gun;
     [SerializeField] LayerMask groundLayerMask;
+    [SerializeField] float movementSpeed = 5f;
 
     private Animator myAnimator;
 
@@ -54,7 +55,8 @@ public class Player : MonoBehaviour
 
     private void Run()
     {
-        myRigidBody.AddForce(transform.right * CrossPlatformInputManager.GetAxis("Horizontal"));
+        float moveForce = CrossPlatformInputManager.GetAxis("Horizontal") * Time.deltaTime * 60;
+        myRigidBody.AddForce(transform.right * moveForce * movementSpeed);
     }
 
     private void Descend()
