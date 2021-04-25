@@ -3588,8 +3588,8 @@ PrefabInstance:
     - target: {fileID: 1474324800692209721, guid: 60004e8482d4ac143b4eb4a48ebf319f,
         type: 3}
       propertyPath: text
-      value: I wore it on the first day I met your granddad. You should treasure
-        your memories of him. One day they might slip away.
+      value: I wore it after I married your granddad. You should treasure your memories
+        of him. One day they might slip away.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60004e8482d4ac143b4eb4a48ebf319f, type: 3}
@@ -5354,8 +5354,8 @@ PrefabInstance:
     - target: {fileID: 1474324800692209721, guid: 60004e8482d4ac143b4eb4a48ebf319f,
         type: 3}
       propertyPath: text
-      value: ...is this a good place? No, not yet, I want to go deeper. We need to
-        hide it well...
+      value: I have put a trap, to prevent others from getting my treasure. Read
+        my notes carefully.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60004e8482d4ac143b4eb4a48ebf319f, type: 3}
@@ -7969,6 +7969,7 @@ Transform:
   - {fileID: 870050244}
   - {fileID: 410142495}
   - {fileID: 631514739}
+  - {fileID: 1914698701}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8577,8 +8578,8 @@ PrefabInstance:
     - target: {fileID: 1474324800692209721, guid: 60004e8482d4ac143b4eb4a48ebf319f,
         type: 3}
       propertyPath: text
-      value: I have put a trap, to prevent others from getting my treasure. Read
-        me notes carefully.
+      value: ...is this a good place? No, not yet, I want to go deeper. I need to
+        hide it well. Lucky it is small, but I have to mark it well.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60004e8482d4ac143b4eb4a48ebf319f, type: 3}
@@ -138503,6 +138504,86 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6756883035629480642, guid: c25f2672b0f2bd84e8de71fc2e4f52ee,
     type: 3}
   m_PrefabInstance: {fileID: 1892318629}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1914698700
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1024378163}
+    m_Modifications:
+    - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -23.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474324800692209717, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: m_Name
+      value: InformationStone (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474324800692209721, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+        type: 3}
+      propertyPath: text
+      value: You can get over that cliff, but you will need to use your harpoon!
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 60004e8482d4ac143b4eb4a48ebf319f, type: 3}
+--- !u!4 &1914698701 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1474324800692209716, guid: 60004e8482d4ac143b4eb4a48ebf319f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1914698700}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1920894913
 PrefabInstance:
