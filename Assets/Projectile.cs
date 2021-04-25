@@ -27,11 +27,13 @@ public class Projectile : MonoBehaviour
             transform.position = new Vector2(transform.position.x + movementDirection.x, transform.position.y + movementDirection.y); 
         } else {
             target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-         
-            transform.position = gun.transform.position;
-            transform.rotation = gun.transform.rotation;
-            Vector2 direction = new Vector2(target.x - transform.position.x, target.y - transform.position.y).normalized;
-            transform.position = transform.position + new Vector3(direction.x * offset, direction.y * offset, 0.0f);
+
+            if (gun != null) { 
+                transform.position = gun.transform.position;
+                transform.rotation = gun.transform.rotation;
+                Vector2 direction = new Vector2(target.x - transform.position.x, target.y - transform.position.y).normalized;
+                transform.position = transform.position + new Vector3(direction.x * offset, direction.y * offset, 0.0f);
+            }
         }
     }
 
