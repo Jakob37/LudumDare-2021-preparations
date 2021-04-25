@@ -60,6 +60,7 @@ public class Player : MonoBehaviour
 
         if (currentHealth < 0 && !isDead) {
             isDead = true;
+            Destroy(gun);
             myAnimator.SetBool("isDead", isDead);
 
             changeToGameOverTime = Time.time + 3;
